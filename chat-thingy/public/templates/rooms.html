@@ -1,0 +1,11 @@
+<div class="rooms-holder">
+    <div class="chat-room" ng-repeat="chatRoom in chatRooms">
+        {{chatRoom}}
+        <button class="room-join-button" ng-click="joinRoom(chatRoom)">Join Room</button>
+    </div>
+
+    <div class="room-controlls">
+        <input class="room-create-name" ng-model="room" type="text" placeholder="Type here...">
+        <button class="room-create-button" ng-click="createRoom()">Create Rooms</button>
+    </div>
+</div>

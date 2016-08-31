@@ -1,0 +1,11 @@
+<div class="chat-area">
+    <div class="message-history">
+        <div class="discussion-message" ng-repeat="chatMessage in chatMessages">
+            {{chatMessage.content}}
+        </div>
+    </div>
+    <div class="form-holder">
+        <input class="message-box" type="text" ng-model="message" ng-keypress="submitKey($event)" placeholder="Type here...">
+        <button class="send-message-button" type="button">Send</button>
+    </div>
+</div>

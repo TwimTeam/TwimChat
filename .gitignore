@@ -1,0 +1,7 @@
+# Other files and folders
+node_modules/
+libs/
+
+# Executables
+*.iml
+*.xml
