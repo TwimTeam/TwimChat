@@ -55,19 +55,20 @@ color: white;
     background: url("img/user-icon.png") no-repeat;
     padding-left: 45px;
     padding-top: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .login-form > .password-input{
     background: url("img/password-icon.png") no-repeat;
     padding-left: 45px;
     padding-top: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .login-form > .password-input:focus,
 .login-form > .username-input:focus{
     border-bottom: 5px solid #67cd98;
+    outline: none;
 }
 .login-button{
     width: 150px;
@@ -81,7 +82,7 @@ color: white;
     border: 3px solid white;
     padding: 10px 0px 10px 0px;
     border-radius: 8px;
-    margin-top: 40px;
+    margin-top: 30px;
 
 }
 
