@@ -1,0 +1,105 @@
+@import 'https://fonts.googleapis.com/css?family=Lato';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    background: url("img/background.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+
+.login-container{
+    background: rgba(255,255,255,0.4);
+    width:385px;
+    height: 545px;
+    position: absolute;
+    top: 60px;
+    left:35.5%;
+    margin: 0 auto;
+}
+
+.login-container > .logo-small{
+    display: block;
+    margin: 0 auto;
+    padding: 55px 0px 25px 0px;
+}
+
+.login-form > input{
+    display: block;
+    margin: 0 auto;
+    box-shadow: none;
+    border: none;
+    background: none;
+    width: 270px;
+    border-bottom: 1px solid white;
+    transition: 0.5s ease;
+    padding: 25px 0 8px 0;
+    font: 18px Lato-Light;
+    color: white;
+    font-weight: 100;
+
+}
+
+::-webkit-input-placeholder {
+color: white;
+
+}
+
+.login-form > .username-input{
+    background: url("img/user-icon.png") no-repeat;
+    padding-left: 45px;
+    padding-top: 8px;
+    margin-bottom: 20px;
+}
+
+.login-form > .password-input{
+    background: url("img/password-icon.png") no-repeat;
+    padding-left: 45px;
+    padding-top: 8px;
+    margin-bottom: 20px;
+}
+
+.login-form > .password-input:focus,
+.login-form > .username-input:focus{
+    border-bottom: 5px solid #67cd98;
+}
+.login-button{
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    font: 18px Lato;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    background: none;
+    border: 3px solid white;
+    padding: 10px 0px 10px 0px;
+    border-radius: 8px;
+    margin-top: 40px;
+
+}
+
+.login-button:hover{
+    background-color: #67cd98;
+    border-color: #67cd98;
+}
+
+.register-link {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    font: 18px Lato-Light;
+    color: white;
+}
+
+.register-link:hover{
+    text-decoration: none;
+    color: #67cd98;
+}
