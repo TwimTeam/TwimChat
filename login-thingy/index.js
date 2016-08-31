@@ -1,3 +1,3 @@
-/**
- * Created by Merrie on 8/31/16.
- */
+var app = angular.module("users-app", []);
+
+
