@@ -3,42 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="./app_content/app.css">
 </head>
 <body>
 <div class="wrapper">
     <header>
-        <h1>Hello+{{username}}</h1>
-        <img src="#" alt="user-photo">
-        <div class="online">Online</div>
+        <h1 class="welcome-message">Hello+<b>{{username}}</b></h1>
+        <img class="profile-picture" src="./app_content/img/default-picture.png" alt="user-photo">
+        <div class="online label">
+            <div class="circle"></div>
+            <p>Online</p>
+        </div>
         <!--Offline Label
-        <div class="offline"></div>-->
+        <div class="offline label"></div>-->
         <nav>
             <ul class="nav-bar">
-                <li class="nav-item">
+                <li class="nav-item active hvr-sweep-to-top">
                     <a href="#">Chat Rooms</a>
                 </li>
-                <li class="nav-item-inactive">
+                <li class="nav-item inactive">
                     <a href="#">Dashboard</a>
                 </li>
 
-                <li class="nav-item-inactive">
+                <li class="nav-item inactive">
                     <a href="#">Friends</a>
                 </li>
 
-                <li class="nav-item-inactive">
+                <li class="nav-item inactive">
                     <a href="#">Profile</a>
                 </li>
 
-                <li class="nav-item-inactive">
+                <li class="nav-item inactive">
                     <a href="#">Pictures</a>
                 </li>
 
-                <li class="nav-item-inactive">
+                <li class="nav-item inactive">
                     <a href="#">Settings</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item active hvr-sweep-to-top">
                     <a href="#">Log Out</a>
                 </li>
             </ul>
