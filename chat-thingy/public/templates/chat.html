@@ -1,3 +1,9 @@
+<div class="wrapper">
+<div class="header-chat-room">
+    {{chatRoom}}
+    <a class="back-link" href="#">Back to Rooms</a>
+</div>
+
 <div class="chat-area">
     <div class="message-history">
         <div class="discussion-message" ng-repeat="chatMessage in chatMessages">
@@ -8,4 +14,5 @@
         <input class="message-box" type="text" ng-model="message" ng-keypress="submitKey($event)" placeholder="Type here...">
         <button class="send-message-button" type="button">Send</button>
     </div>
+</div>
 </div>

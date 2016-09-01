@@ -1,24 +1,52 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+background: url("./img/background.png");
+}
+
+.header-chat-room{
+    background: rgba(51,54,55,0.7);
+    height: 100px;
+    display: inline-block;
+    width:100%;
+    margin: 0 auto;
+}
+
+.back-link{
+    text-decoration: none;
+    font: 18px Lato-Light;
+    color:white;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 8px;
+    padding:5px;
+}
 
 .chat-area {
-    width: 100%;
+    margin: 0 auto;
+    width: 60%;
     height: 520px;
 }
 
 .message-history {
     top: 0;
     list-style: none;
-    padding: 0.5em;
+    padding: 10px;
     overflow: auto;
     height: 95%;
-    border: 5px solid #6affec;
+    background: rgba(255,255,255,0.7);
 }
 
 .discussion-message {
-    width: 98.5%;
+    width: 100%;
     font: 1.2em 'Montserrat Alternates';
     padding: 0.5em;
-    border-bottom: 2px solid #6affec;
 }
 
 .discussion-message:last-child {
@@ -38,31 +66,36 @@
     display: flex;
     position: fixed;
     margin-bottom: 1em;
-    width: 98.5%;
+    width: 60%;
+    margin: 0 auto;
     bottom: 0;
     flex-direction: row;
-    box-shadow: 1px 1px 0 rgb(22, 160, 133),
-    2px 2px 0 rgb(22, 160, 133),
-    3px 3px 0 rgb(22, 160, 133),
-    4px 4px 0 rgb(22, 160, 133),
-    5px 5px 0 rgb(22, 160, 133),
-    6px 6px 0 rgb(22, 160, 133),
-    7px 7px 0 rgb(22, 160, 133);
+    background: none;
+
 }
 
 .form-holder > input[type=text],
 .form-holder > button {
     display: block;
-    font: 1.2em 'Montserrat Alternates';
+    font: 1.2em Lato Light;
 }
 
 .form-holder > input[type=text] {
     flex: 1;
     padding: 0.6em;
-    border: 0.2em solid rgb(26, 188, 156);
 }
 
 .form-holder > button {
-    padding: 0.6em 0.8em;
-    background-color: rgb(26, 188, 156);
+    font: 14px Lato-Black;
+    color: #67cd98;
+    padding: 0px 20px 0px 20px;
+    height: 40px;
+    border: 3px solid #67cd98;
+    border-radius: 8px;
+    background:none;
+}
+
+.form-holder > button:hover{
+    color:white;
+    background: #67cd98;
 }
