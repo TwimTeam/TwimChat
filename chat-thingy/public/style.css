@@ -61,7 +61,7 @@ background: url("./img/background.png");
 
 .discussion-message {
     width: 100%;
-    font: 1.2em 'Montserrat Alternates';
+    font: 1.2em Lato-Light;
     padding: 0.5em;
 }
 

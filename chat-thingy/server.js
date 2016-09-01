@@ -14,7 +14,7 @@ io.on('connection', function (socket) {
         var sentMessage = {content: message.content};
         io.in(message.room).emit('chatMessage', sentMessage);
     });
-    
+
     socket.on('joinRoom', function (room) {
         socket.join(room);
     });
