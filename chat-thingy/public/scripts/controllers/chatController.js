@@ -17,13 +17,6 @@ angular.module('chat.controllers')
             var room = $routeParams.room;
             socketService.validateSocketInRoom(room);
 
-            socket.on('inRoomValidationResult', function(result) {
-                if(!result) {
-                    $location.path('/rooms');
-                }
-            });
-
-
             socketService.on('chatMessage', function (message) {
                 $scope.chatMessages.push(message);
                 $scope.$apply();
