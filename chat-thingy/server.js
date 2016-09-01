@@ -15,14 +15,6 @@ io.on('connection', function (socket) {
         io.in(message.room).emit('chatMessage', sentMessage);
     });
     
-    socket.on('validateSocketInRoom', function(room){
-        if(socket.rooms.indexOf(room) < 0){
-            io.emit('');
-        }
-
-        return true;
-    });
-
     socket.on('joinRoom', function (room) {
         socket.join(room);
     });
