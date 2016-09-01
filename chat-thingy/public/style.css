@@ -16,16 +16,32 @@ background: url("./img/background.png");
     display: inline-block;
     width:100%;
     margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.header-message{
+    font: 32px Lato-Black;
+    color:white;
+    text-align: center;
 }
 
 .back-link{
+    
     text-decoration: none;
     font: 18px Lato-Light;
-    color:white;
+    color: #67cd98;
     text-align: center;
-    border: 3px solid white;
+    border: 3px solid #67cd98;;
     border-radius: 8px;
     padding:5px;
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+}
+
+.back-link:hover{
+    color:white;
+    background: #67cd98;
 }
 
 .chat-area {
