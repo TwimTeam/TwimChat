@@ -127,5 +127,32 @@ text-align: center;
 color: #a2a2a2;
 }
 
+.chat-rooms-display{
+    text-align: center;
+}
+
+.chat-room-container{
+    display: flex-box;
+    float:left;
+    padding: 50px;
+    margin: 60px;
+    width: 160px;
+    height: 160px;
+    background: rgba(103,205,152,0.8);
+    list-style-type: none;
+}
+
+.new-chat-room-button{
+    border: none;
+    background: none;
+    font: 25px Lato-Black;
+    color: white;
+
+.fa-plus-circle{
+    padding:10px;
+    color:white;
+}
+
+}
 
 
