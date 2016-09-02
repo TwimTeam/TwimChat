@@ -28,6 +28,7 @@
     font: 32px Lato-Black;
     color:white;
     text-align: center;
+    padding: 5px;
 }
 
 .back-link{
@@ -47,6 +48,7 @@
 .back-link:hover{
     color:white;
     background: #67cd98;
+    cursor: pointer;
 }
 
 .chat-area {
@@ -60,7 +62,7 @@
     list-style: none;
     padding: 10px;
     overflow: auto;
-    height: 95%;
+    height: 100%;
     background: rgba(255,255,255,0.7);
 }
 
@@ -95,7 +97,7 @@
     margin-top: 0;
     width: 50%;
     margin: 0 auto;
-    bottom: 0;
+    bottom: 10px;
     flex-direction: row;
     border: none;
 
