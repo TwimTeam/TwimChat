@@ -10,8 +10,12 @@
 body {
      font-size: 100%;
      margin: 15px;
-    background: #666;
-    color: #fff;
+    background: url("./images/background-stickynotes.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
  }
 
 #controls img {
