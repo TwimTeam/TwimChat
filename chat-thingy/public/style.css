@@ -7,7 +7,12 @@
 }
 
 .wrapper{
-background: url("./img/background.png");
+    background: url("./img/background.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
 }
 
 .header-chat-room{
@@ -46,7 +51,7 @@ background: url("./img/background.png");
 
 .chat-area {
     margin: 0 auto;
-    width: 60%;
+    width: 50%;
     height: 520px;
 }
 
@@ -65,9 +70,15 @@ background: url("./img/background.png");
     padding: 0.5em;
 }
 
+::-webkit-input-placeholder {
+    color: #565656;
+    font: 16px Lato-Light !important;
+
+}
+
 .discussion-message:last-child {
     width: 98.5%;
-    font: 1.2em 'Montserrat Alternates';
+    font: 1.2em Lato-Light;
     padding: 0.5em;
     border-bottom: none;
 }
@@ -75,25 +86,25 @@ background: url("./img/background.png");
 .form-holder * {
     margin: 0;
     padding: 0;
-    font: 12pt Arial;
+    font: 12pt Lato-Light;
 }
 
 .form-holder {
     display: flex;
     position: fixed;
-    margin-bottom: 1em;
-    width: 60%;
+    margin-top: 0;
+    width: 50%;
     margin: 0 auto;
     bottom: 0;
     flex-direction: row;
-    background: none;
+    border: none;
 
 }
 
 .form-holder > input[type=text],
 .form-holder > button {
     display: block;
-    font: 1.2em Lato Light;
+    font: 16px Lato-Light;
 }
 
 .form-holder > input[type=text] {
@@ -101,14 +112,16 @@ background: url("./img/background.png");
     padding: 0.6em;
 }
 
+.message-box:focus{
+    outline: none;
+}
 .form-holder > button {
     font: 14px Lato-Black;
-    color: #67cd98;
+    color: white;
     padding: 0px 20px 0px 20px;
-    height: 40px;
+    height: 48px;
     border: 3px solid #67cd98;
-    border-radius: 8px;
-    background:none;
+    background:#67cd98;
 }
 
 .form-holder > button:hover{
