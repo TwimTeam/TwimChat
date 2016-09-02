@@ -1,5 +1,5 @@
 * {
-    maring: 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -8,28 +8,57 @@
      }
 
 body {
-     font-size: 100%;
-     margin: 15px;
+    font: 18px Lato;
+    font-weight: 300;
+    color: white;
+    margin: 15px;
     background: url("./images/background-stickynotes.png") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
- }
+    background-attachment: fixed;
+}
+header{
+    background: rgba(51,54,55,0.7);
+    width: 100%;
+
+}
+
+header >h1{
+    font-weight: 300;
+    text-align: center;
+    padding:10px;
+}
+
+.sub-header{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    background: #333637;
+    padding: 8px;
+}
+
+.sub-header > h3{
+    font: 16px Lato;
+    font-weight: 300;
+    display: inline-block;
+}
 
 #controls img {
-          width: 28px;
-           height: 30px;
-           background: rgba(0, 0, 0, 0);
-       }
+    width: 28px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0);
+}
 
 #controls img:hover, #controls img:focus {
     -webkit-transform: scale(1.2);
-          -moz-transform: scale(1.2);
-          -o-transform: scale(1.2);
-           position:relative;
-      }
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    position: relative;
+    outline: none;
+}
 
  ul, li {
     list-style: none;
@@ -41,85 +70,50 @@ body {
  }
 
 ul li {
-   margin: 15px;
+    margin: 15px;
     float: left;
-   position: relative;
- }
+    position: relative;
+}
 
  ul li div {
-        text-decoration: none;
-       color: #000;
-         background: #ffc;
-        display: block;
-        height: 150px;
-         width: 150px;
-          padding: 10px;
-         -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
-          -webkit-box-shadow: 5px 5px 7px  rgba(33, 33, 33, .7);
-          box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
-       -moz-transition: -moz-transform .15s linear;
-        -o-transition: -o-transform .15s linear;
-        -webkit-transition: -webkit-transform .15s linear;
-           border-style: solid;
-     }
+     text-decoration: none;
+     color: #fff;
+     background: #fff;
+     display: block;
+     height: 150px;
+     width: 150px;
+     padding: 10px;
+     -moz-transition: -moz-transform .15s linear;
+     -o-transition: -o-transform .15s linear;
+     -webkit-transition: -webkit-transform .15s linear;
+ }
 
  ul li div img {
-         padding: 1px 3px;
-      margin: 10px;
-   position: absolute;
-         top: 0;
+     padding: 1px 3px;
+     margin: 10px;
+     position: absolute;
+     top: 0;
      right: 0;
-      }
+ }
 
  ul li textarea {
-          font-family: 'Chewy', arial, sans-serif;
-    background: rgba(0, 0, 0, 0); /* transparent background */
-          resize: none;
-         padding: 3px;
-          border-style: none;
-      }
+     font: 18px Lato;
+     font-weight: 300;
+     background: rgba(0, 0, 0, 0); /* transparent background */
+     resize: none;
+     padding: 3px;
+     border: none;
+     color: white;
+ }
 
 .note-title {
-           font-size: 140%;
-      font-weight: bold;
-           height: 30px;
-        width: 70%;
-    }
+    font: 24px Lato;
+    font-weight: 900;
 
-.note-content {
-         font-size:120%;
-         height: 100px;
-          width: 95%;
-       }
+}
 
- ul li:nth-child(even) div {
-         -o-transform:rotate(4deg);
-       -webkit-transform:rotate(4deg);
-        -moz-transform:rotate(4deg);
-        position:relative;
-         top:5px;
-       }
-
- ul li:nth-child(3n) div {
-        -o-transform:rotate(-3deg);
-        -webkit-transform:rotate(-3deg);
-       -moz-transform:rotate(-3deg);
-         position:relative;
-        top:-5px;
-     }
-
- ul li:nth-child(5n) div {
-          -o-transform:rotate(5deg);
-        -webkit-transform:rotate(5deg);
-        -moz-transform:rotate(5deg);
-          position:relative;
-       top:-10px;
-       }
 
 ul li div:hover, ul li div:focus {
-         -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
-         -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
-          box-shadow:10px 10px 7px rgba(0,0,0,.7);
           -webkit-transform: scale(1.25);
           -moz-transform: scale(1.25);
           -o-transform: scale(1.25);
@@ -137,3 +131,8 @@ ul li div.colour2 {
 ul li div.colour3 {
           background: #00afc1;
        }
+
+#notes{
+    text-align: center;
+    margin: 0 auto;
+}

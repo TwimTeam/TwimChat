@@ -39,9 +39,6 @@
             var div = noteElement.children("div");
             var closeImg = div.find("img");
 
-            div.focus(function () {
-                closeImg.removeClass("hide");
-            });
 
             div.children().focus(function () {
                 closeImg.removeClass("hide");
@@ -70,8 +67,8 @@
 
             // add a new note to the end of the list
             notes.append("<li><div class='" + className + "'>" +
-                    "<textarea class='note-title' placeholder='Untitled' maxlength='10'/>" +
-                    "<textarea class='note-content' placeholder='Your content here'/>" +
+                    "<textarea class='note-title' placeholder='Enter Title' maxlength='10'/>" +
+                    "<textarea class='note-content' placeholder='Enter text'/>" +
                     "<img class='hide' src='images/close.png'/>" +
                     "</div></li>");
 
@@ -137,25 +134,15 @@
         });
     </script>
 
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-12216268-1']);
-        _gaq.push(['_setDomainName', '.theburningmonk.com']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
 </head>
 
 <body>
-<div id="controls">
+<header>
+    <h1 class="welcome-message-notes">Welcome to your sticky notes,+<b>{{username}}</b></h1>
+</header>
+<div class="sub-header" id="controls">
     <img id="btnNew" src="images/newnote.png"/>
+    <h3>Create new sticky note</h3>
 </div>
 
 <ul id="notes"/>
