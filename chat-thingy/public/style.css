@@ -71,7 +71,10 @@
     padding: 0.5em;
     background: #41bead;
     width:30%;
+    border-radius: 8px;
+    margin-bottom: 10px;
     color:white;
+
 }
 
 ::-webkit-input-placeholder {
@@ -85,7 +88,10 @@
     padding: 0.5em;
     border-bottom: none;
     background: #41bead;
+    border-radius: 8px;
+    margin-bottom: 10px;
     width:30%;
+
 }
 
 .form-holder * {
