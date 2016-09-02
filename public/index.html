@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TWIM</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./app-content/login_register.css">
+    <link rel="stylesheet" href="./app-content/rooms.css">
+    <link rel="stylesheet" href="./app-content/chat.css">
+    <link rel="stylesheet" href="./app-content/style.css">
+    <!--<link type="text/css" rel="stylesheet" href="./app-content/sticky-notes.css"/>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20150503/json2.js"></script>-->
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="scripts/libs/jquery.min.js"></script>
+    <script src="scripts/libs/angular.min.js"></script>
+    <script src="scripts/libs/angular-route.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/socketService.js"></script>
+    <script src="scripts/services/userService.js"></script>
+    <script src="scripts/controllers/home.controller.js"></script>
+    <!--<script src="scripts/controllers/stickynotes.controller.js"></script>-->
+    <script src="scripts/controllers/login.controller.js"></script>
+    <script src="scripts/controllers/register.controller.js"></script>
+    <script src="scripts/controllers/chat.controller.js"></script>
+    <script src="scripts/controllers/room.controller.js"></script>
+</head>
+<body ng-app="chat">
+<div class="wrapper" ng-view></div>
+</body>
+</html>

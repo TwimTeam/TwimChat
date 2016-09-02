@@ -1,0 +1,162 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.chat-wrapper{
+    background: url("./img/chat-background.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header-chat-room{
+    background: rgba(51,54,55,0.7);
+    height: 100px;
+    display: inline-block;
+    width:100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.header-message{
+    font: 32px Lato;
+    font-weight: 900;
+    color:white;
+    text-align: center;
+    padding: 5px;
+}
+
+.back-link{
+
+    text-decoration: none;
+    font: 18px Lato;
+    font-weight: 300;
+    color: #67cd98;
+    text-align: center;
+    border: 3px solid #67cd98;;
+    border-radius: 8px;
+    padding:5px;
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+}
+
+.back-link:hover{
+    color:white;
+    text-decoration: none;
+    background: #67cd98;
+    cursor: pointer;
+}
+
+.chat-area {
+    margin: 0 auto;
+    width: 50%;
+    height: 520px;
+}
+
+.message-history {
+    top: 0;
+    list-style: none;
+    padding: 10px;
+    overflow: auto;
+    height: 90%;
+    background: rgba(255,255,255,0.7);
+}
+
+.discussion-message {
+    font: 1.2em Lato;
+    font-weight: 300;
+    padding: 0.5em;
+    background: #41bead;
+    width:30%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color:white;
+}
+
+.user-message {
+    font: 1.2em Lato;
+    font-weight: 300;
+    padding: 0.5em;
+    background: #41bead;
+    width: 30%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: white;
+    margin-left: 66%;
+    text-align: right;
+}
+
+::-webkit-input-placeholder {
+    color: #565656;
+    font: 16px Lato;
+    font-weight: 300;
+
+}
+
+.discussion-message:last-child {
+    font: 1.2em Lato;
+    font-weight: 300;
+    padding: 0.5em;
+    border-bottom: none;
+    background: #41bead;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width:30%;
+
+}
+
+.form-holder * {
+    margin: 0;
+    padding: 0;
+    font: 12pt Lato;
+    font-weight: 300;
+}
+
+.form-holder {
+    display: flex;
+    position: fixed;
+    margin-top: 0;
+    width: 50%;
+    margin: 0 auto;
+    bottom: 10px;
+    flex-direction: row;
+    border: none;
+
+}
+
+.form-holder > input[type=text],
+.form-holder > button {
+    display: block;
+    font: 16px Lato;
+    font-weight: 300;
+}
+
+.form-holder > input[type=text] {
+    flex: 1;
+    padding: 0.6em;
+}
+
+.message-box:focus{
+    outline: none;
+}
+.form-holder > button {
+    font: 14px Lato;
+    font-weight: 900;
+    color: white;
+    padding: 0px 20px 0px 20px;
+    height: 48px;
+    border: 3px solid #67cd98;
+    background:#67cd98;
+}
+
+.form-holder > button:hover{
+    color:white;
+    background: #67cd98;
+}

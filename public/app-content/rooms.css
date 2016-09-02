@@ -1,0 +1,297 @@
+@import url('http://fonts.googleapis.com/css?family=Lato');
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.hvr-sweep-to-top {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.hvr-sweep-to-top:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #28292a;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    cursor: pointer;
+}
+
+.hvr-sweep-to-top:hover, .hvr-sweep-to-top:focus, .hvr-sweep-to-top:active {
+    color: white;
+    cursor: pointer;
+}
+
+.hvr-sweep-to-top:hover:before, .hvr-sweep-to-top:focus:before, .hvr-sweep-to-top:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    cursor: pointer;
+}
+
+.rooms-wrapper {
+    background: url("img/rooms-background.png") no-repeat center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+header {
+    height: 280px;
+    background: rgba(51, 54, 55, 0.7);
+}
+
+.welcome-message {
+    font: 22px Lato;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+
+}
+
+.profile-picture {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.label {
+    box-sizing: content-box;
+    width: 100px;
+    height: 20px;
+    padding: 10px;
+    border: 2px solid #686969;
+    border-radius: 30px;
+    display: inline-block;
+    margin-left: calc(50% - 60px);
+    margin-top: 20px;
+}
+
+.label > p {
+    font: 16px Lato;
+    font-weight: 300;
+    color: #cccccc;
+}
+
+.circle {
+    float: left;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: 8px solid #4fbf94;
+    margin-right: 15px;
+    margin-left: 5px;
+}
+
+.nav-bar {
+    text-align: center;
+}
+
+.nav-bar > .nav-item {
+    display: inline-block;
+    padding: 20px 30px 20px 20px;
+}
+
+.nav-item > a {
+    text-decoration: none;
+    font: 16px Lato;
+    font-weight: 300;
+    color: white;
+    padding: 20px;
+}
+
+.inactive {
+    color: #a2a2a2;
+}
+
+.chat-rooms-display {
+    text-align: center;
+    margin-left: 65px;
+}
+
+.chat-room-container {
+    box-sizing: content-box;
+    display: flex-box;
+    float: left;
+    padding: 50px;
+    margin: 60px;
+    width: 160px;
+    height: 160px;
+    background: rgba(103, 205, 152, 0.8);
+    list-style-type: none;
+}
+
+.create-chat-room {
+    box-sizing: content-box;
+    display: flex-box;
+    float: left;
+    padding: 50px;
+    margin: 60px;
+    width: 160px;
+    height: 160px;
+    background: rgba(103, 205, 152, 0.8);
+    list-style-type: none;
+}
+
+.new-chat-room-button {
+    border: none;
+    background: none;
+    font: 25px Lato;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+}
+
+.fa-plus-circle {
+    padding: 20px;
+    color: #ffffff;
+}
+
+.title-chat {
+    text-transform: uppercase;
+    font: 25px Lato;
+    font-weight: 900;
+    color: white;
+    padding-bottom: 5px;
+}
+
+.subtitle-chat {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font: 16px Lato;
+    font-weight: 300;
+    color: white;
+    padding: 10px;
+}
+
+.join-button {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    background: none;
+    font: 16px Lato;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    width: 100px;
+    margin-top: 50px;
+}
+
+.join-button:hover {
+    background: white;
+    color: #67cd98;
+}
+
+.room-name-input {
+    border: none;
+    background: none;
+    padding: 10px;
+    margin-top: 20px;
+    font: 20px Lato;
+    font-weight: 300;
+    width: 90%;
+    color: white;
+    transition: 0.5s ease-in;
+}
+
+.room-name-input:focus {
+    border-bottom: 5px solid #41BEAD;
+    outline: none;
+}

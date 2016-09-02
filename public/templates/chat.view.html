@@ -1,0 +1,19 @@
+<div class="chat-wrapper">
+    <div class="header-chat-room">
+        <h1 class="header-message">Welcome to {{room}}!</h1>
+        <a class="back-link" href="#/rooms" ng-click="leaveRoom()">Back to Rooms</a>
+    </div>
+
+    <div class="chat-area">
+        <div class="message-history">
+            <div class="discussion-message" ng-repeat="chatMessage in chatMessages" ng-class="{'user-message': chatMessage.isUser}">
+                {{!chatMessage.isUser ? chatMessage.user + ': ' + chatMessage.content : chatMessage.content}}
+            </div>
+        </div>
+        <div class="form-holder">
+            <input class="message-box" type="text" ng-model="message" ng-keypress="submitKey($event)"
+                   placeholder="Type here...">
+            <button class="send-message-button" type="button">Send</button>
+        </div>
+    </div>
+</div>s

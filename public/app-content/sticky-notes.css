@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hide {
+        display: none;
+     }
+
+body {
+    font: 18px Lato;
+    font-weight: 300;
+    color: white;
+    background: url("./images/background-stickynotes.png") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+header{
+    background: rgba(51,54,55,0.7);
+    width: 100%;
+    padding: 20px;
+
+}
+
+header >h1{
+    font-weight: 300;
+    text-align: center;
+    padding:10px;
+}
+
+.sub-header{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    background: #333637;
+    padding: 8px;
+}
+
+.sub-header > h3{
+    font: 16px Lato;
+    font-weight: 300;
+    display: inline-block;
+}
+
+#controls img {
+    width: 28px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0);
+}
+
+#controls img:hover, #controls img:focus {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    position: relative;
+    outline: none;
+}
+
+ ul, li {
+    list-style: none;
+ }
+
+ ul {
+    overflow: hidden;
+    padding: 15px;
+ }
+
+ul li {
+    margin: 15px;
+    float: left;
+    position: relative;
+}
+
+ ul li div {
+     text-decoration: none;
+     color: #fff;
+     background: #fff;
+     display: block;
+     height: 150px;
+     width: 150px;
+     padding: 10px;
+     -moz-transition: -moz-transform .15s linear;
+     -o-transition: -o-transform .15s linear;
+     -webkit-transition: -webkit-transform .15s linear;
+ }
+
+ ul li div img {
+     padding: 1px 3px;
+     margin: 10px;
+     position: absolute;
+     top: 0;
+     right: 0;
+ }
+
+ ul li textarea {
+     font: 18px Lato;
+     font-weight: 300;
+     background: rgba(0, 0, 0, 0); /* transparent background */
+     resize: none;
+     padding: 3px;
+     border: none;
+     color: white;
+ }
+
+.note-title {
+    font: 24px Lato;
+    font-weight: 900;
+
+}
+
+
+ul li div:hover, ul li div:focus {
+          -webkit-transform: scale(1.25);
+          -moz-transform: scale(1.25);
+          -o-transform: scale(1.25);
+          position:relative;
+          z-index:5;
+        }
+
+/* 3 different colours for the notes */
+ul li div.colour1 {
+       background: #41bead;
+      }
+ul li div.colour2 {
+         background: #67cd98;
+        }
+ul li div.colour3 {
+          background: #00afc1;
+       }
+
+#notes{
+    text-align: center;
+    margin: 0 auto;
+}
