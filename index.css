@@ -6,6 +6,10 @@
  .wrapper {
      position: relative;
      width: 100vm;
+     background-image: url("images/installBG.png");
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
  }
 
  .navbar {
@@ -104,6 +108,11 @@
      text-align: left;
      display: flex;
      align-items: center;
+     background: white;
+ }
+
+ #welcome-text span {
+     color: #41bead;
  }
 
  #about-features {
@@ -128,8 +137,8 @@
  .image-holder {
      background: #4fbf94;
      border-radius: 50%;
-     height: 150px;
-     width: 150px;
+     height: 200px;
+     width: 200px;
      margin: auto;
  }
 
@@ -142,6 +151,29 @@
     position: relative;
  }
 
+ .screen {
+     position: relative;
+     padding-top: 10%;
+     text-align: center;
+ }
+
+ .screen .sm-screen{
+     width: 100%;
+     height: 100%;
+     max-width: 400px;
+     display: block;
+     margin: 0 auto;
+     box-shadow: 0 0 20px #000000;
+ }
+
+ .screen .bullet {
+     width: 100%;
+     height: 100%;
+     max-width: 400px;
+     display: block;
+     margin: 0 auto;
+ }
+
  #screens #multiple-screens {
      height: 20vh;
      background: transparent;
@@ -151,13 +183,6 @@
 
  #multiple-screens>div {
      position: relative;
- }
-
- .sm-screen {
-     margin: auto;
-     margin-top: 5%;
-     width: 100%;
-     padding-top: 2%;
  }
 
  #screens #big-screen{
