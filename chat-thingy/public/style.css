@@ -67,9 +67,11 @@
 }
 
 .discussion-message {
-    width: 100%;
     font: 1.2em Lato-Light;
     padding: 0.5em;
+    background: #41bead;
+    width:30%;
+    color:white;
 }
 
 ::-webkit-input-placeholder {
@@ -79,10 +81,11 @@
 }
 
 .discussion-message:last-child {
-    width: 98.5%;
     font: 1.2em Lato-Light;
     padding: 0.5em;
     border-bottom: none;
+    background: #41bead;
+    width:30%;
 }
 
 .form-holder * {
