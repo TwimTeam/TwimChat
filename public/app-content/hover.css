@@ -1595,7 +1595,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098d1;
+    background: #333637;
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 100%;
@@ -2967,7 +2967,7 @@
     top: calc(50% - 10px);
     right: 0;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #e1e1e1;
+    border-color: transparent transparent transparent #41bead;
 }
 .hvr-bubble-right:hover:before, .hvr-bubble-right:focus:before, .hvr-bubble-right:active:before {
     -webkit-transform: translateX(10px);

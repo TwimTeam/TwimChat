@@ -6,7 +6,7 @@
 
     <div class="chat-area">
         <div class="message-history">
-            <div class="discussion-message" ng-repeat="chatMessage in chatMessages" ng-class="{'user-message': chatMessage.isUser}">
+            <div class="discussion-message hvr-bubble-right" ng-repeat="chatMessage in chatMessages" ng-class="{'user-message': chatMessage.isUser}">
                 {{!chatMessage.isUser ? chatMessage.user + ': ' + chatMessage.content : chatMessage.content}}
             </div>
         </div>
