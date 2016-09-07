@@ -28,8 +28,23 @@ angular.module('chat.controllers')
                 $('.message-history').scrollTop($('.message-history')[0].scrollHeight);
             });
 
+            socketService.on('joinedRoom', function(user) {
+                var message = user.username + " has joined the room.";
+                $scope.chatMessages.push({content: message, isUser: false, user: null});
+                $scope.$apply();
+                $('.message-history').scrollTop($('.message-history')[0].scrollHeight);
+            });
+
+            socketService.on('leftRoom', function(user) {
+                var message = user.username + " has left the room.";
+                $scope.chatMessages.push({content: message, isUser: false, user: null});
+                $scope.$apply();
+                $('.message-history').scrollTop($('.message-history')[0].scrollHeight);
+            });
+
             $scope.leaveRoom = function() {
-                socketService.leave($scope.room);
+                var args = {room: $scope.room, user: userService.getCurrentUser()};
+                socketService.leave(args);
             };
 
             $scope.sendMessage = function () {
