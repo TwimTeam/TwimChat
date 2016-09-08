@@ -135,14 +135,4 @@ angular.module('chat.controllers')
 
 
 
-// save the notes into local storage
-
-// add event handlers to a note
-
-
-//  adds a new note to the 'notes' list
-
-
-// load the notes saved in the local storage
-
 
