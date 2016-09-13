@@ -65,7 +65,7 @@
     list-style: none;
     padding: 10px;
     overflow: auto;
-    height: 90%;
+    height: 80vh;
     background: rgba(255,255,255,0.7);
 }
 
@@ -90,6 +90,7 @@
     margin-bottom: 10px;
     color: white;
     margin-left: 66%;
+    word-break: break-all;
     text-align: right;
 }
 
@@ -109,7 +110,6 @@
     border-radius: 8px;
     margin-bottom: 10px;
     width:30%;
-
 }
 
 .form-holder * {

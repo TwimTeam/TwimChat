@@ -33,7 +33,8 @@ angular.module('chat.controllers')
             });
 
             $scope.joinRoom = function (room) {
-                socketService.join(room);
+                var args = {room: room, user: userService.getCurrentUser()};
+                socketService.join(args);
                 $location.path('/chat/' + room);
             };
 

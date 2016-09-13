@@ -51,7 +51,7 @@ router.get('/', function (req, res) {
 
 router.route('/users')
     .get(function (req, res) {
-        res.status(405).send({message: 'Unsupported action'});
+        res.status(405).send({error: 'Unsupported action.'});
     })
     .post(function (req, res) {
         var user = new User();
@@ -62,22 +62,22 @@ router.route('/users')
 
         user.save(function (error) {
             if (error) {
-                res.send(error);
+                res.send({error: error});
             }
 
-            res.json({message: 'User registered successfully!'});
+            res.json({message: 'User registered successfully.'});
         });
     })
     .put(function (req, res) {
-        res.status(405).send({message: 'Unsupported action'});
+        res.status(405).send({error: 'Unsupported action.'});
     })
     .delete(function (req, res) {
-        res.status(405).send({message: 'Unsupported action'});
+        res.status(405).send({error: 'Unsupported action.'});
     });
 
 router.route('/users/login')
     .get(function (req, res) {
-        res.status(405).send({message: 'Unsupported action'});
+        res.status(405).send({error: 'Unsupported action.'});
     })
     .post(function (req, res) {
         var username = req.body.username;
@@ -89,27 +89,29 @@ router.route('/users/login')
 
         query.exec(function (error, user) {
             if (error) {
-                res.send(error);
+                res.send({error: "The username does not exist."});
             }
 
-            if ((user.password == password) === true) {
-                requestResult = true;
+            res.json(user);
+        }).then(function(success) {
+            var user = success;
+
+            if (user.password == password) {
                 res.json({_id: user._id, username: user.username, _authToken: user._authToken});
             }
             else {
                 res.status(400).send({error: 'Invalid username or password.'});
             }
-        }).then(function(success) {
-            res.json(success.data);
+
         }, function(error) {
             res.send(error);
         });
     })
     .put(function (req, res) {
-        res.status(405).send({message: 'Unsupported action'});
+        res.status(405).send({error: 'Unsupported action'});
     })
     .delete(function (req, res) {
-        res.status(405).send({message: 'Unsupported action'});
+        res.status(405).send({error: 'Unsupported action'});
     });
 
 
@@ -119,24 +121,25 @@ router.route('/rooms')
 
         if (userAuthorization) {
             var authArguments = userAuthorization.split(' ');
+
             if (authArguments[0] == 'User') {
                 var userCredentials = atob(authArguments[1]).split(':');
             }
             else {
                 var error = 'Invalid Credentials.';
-                res.status(401).send(error);
+                res.status(401).send({error: error});
                 return;
             }
         }
         else {
             var error = 'Invalid Credentials.';
-            res.status(401).send(error);
+            res.status(401).send({error: error});
             return;
         }
 
         Room.find(function (error, rooms) {
             if (error) {
-                res.send(error);
+                res.send({error: error});
             }
 
             res.json(rooms);
@@ -152,13 +155,13 @@ router.route('/rooms')
             }
             else {
                 var error = 'Invalid Credentials.';
-                res.status(401).send(error);
+                res.status(401).send({error: error});
                 return;
             }
         }
         else {
             var error = 'Invalid Credentials.';
-            res.status(401).send(error);
+            res.status(401).send({error: error});
             return;
         }
 
@@ -174,10 +177,10 @@ router.route('/rooms')
         });
     })
     .put(function (req, res) {
-        res.status(405).send({message: 'Unsupported action'});
+        res.status(405).send({error: 'Unsupported action'});
     })
     .delete(function (req, res) {
-        res.status(405).send({message: 'Unsupported action'});
+        res.status(405).send({error: 'Unsupported action'});
     });
 
 // ====================================================
@@ -186,17 +189,19 @@ router.route('/rooms')
 io.on('connection', function (socket) {
     console.log("User has connected!");
 
-    socket.on('chatMessage', function (message) {
-        var sentMessage = {content: message.content, user: message.user};
-        io.in(message.room).emit('chatMessage', sentMessage);
+    socket.on('chatMessage', function (eventArgs) {
+        var sentMessage = {content: eventArgs.content, user: eventArgs.user};
+        io.in(eventArgs.room).emit('chatMessage', sentMessage);
     });
 
-    socket.on('joinRoom', function (room) {
-        socket.join(room);
+    socket.on('joinRoom', function (eventArgs) {
+        io.in(eventArgs.room).emit('joinedRoom', eventArgs.user);
+        socket.join(eventArgs.room);
     });
 
-    socket.on('leaveRoom', function (room) {
-        socket.leave(room);
+    socket.on('leaveRoom', function (eventArgs) {
+        socket.leave(eventArgs.room);
+        io.in(eventArgs.room).emit('leftRoom', eventArgs.user);
     });
 });
 

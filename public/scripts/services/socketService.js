@@ -13,13 +13,14 @@ angular.module('chat.services')
                 socket.emit(event, eventArgs);
             }
 
-            function join(room) {
-                socket.emit('joinRoom', room);
-                sessionStorage.setItem('room', room);
+            function join(args) {
+                socket.emit('joinRoom', args);
+                sessionStorage.setItem('room', args.room);
             }
 
-            function leave(room) {
-                socket.emit('leaveRoom', room);
+            function leave(args) {
+                socket.emit('leaveRoom', args);
+                sessionStorage.setItem('room', '');
             }
 
             function validateSocketInRoom(room) {
